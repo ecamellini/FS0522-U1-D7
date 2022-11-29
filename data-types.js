@@ -151,3 +151,36 @@ console.log("Hello " + 123 + " what's happening " + true);
 // The plus operato in JS, if you apply it to things that are not NUMBERS
 // 1) Convert everything into strings
 // 2) concatenate all the things together
+
+// IF POSSIBLE, AVOID MIXING DATA-TYPES BECAUSE OPERATORS BECOME UNPREDICTABLE
+// 12 + "12" = "1212"
+// 12 * "12" = NaN
+// ...
+// not consistent behaviours
+
+console.log("\n--------------PARSING----------------\n");
+
+// Parsing is the act of extracting some information out of a string
+
+let sugar = "125 g";
+let water = "1 l";
+
+let sugarAmount = parseInt(sugar);
+let waterAmount = parseInt(water);
+// Suppose we KNOW that water is in liters, so we convert it into grams
+let totalWeight = sugarAmount + waterAmount * 1000;
+
+console.log("sugar:", sugar);
+console.log("water:", water);
+console.log("totalWeight (water converted into grams):", totalWeight);
+
+// parseInt("Hello") ---> NaN
+
+console.log("We can also parse float numbers:", parseFloat("1.345 grams"));
+
+console.log(
+  "parseInt('123 grams and 1 liter')",
+  parseInt("123 grams and 1 liter")
+);
+
+console.log(`parseInt("Hello")`, parseInt("Hello"));
