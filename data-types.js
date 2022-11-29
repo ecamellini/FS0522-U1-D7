@@ -48,3 +48,33 @@ console.log("The field is now emptied:", inputFromTheUser);
 // we use null when we explicitly empty a variable.
 // undefined -- if possible, we leave it to JS, it will be put
 // in variables just by JS, by default.
+
+console.log("\n------------------STRINGS--------------------\n");
+
+let thisIsAString = "Hello, I am a sequence of characters!";
+let thisIsAnotherString = "Hello, another sequence of chars here :)";
+let thisIsYetAnotherString = `Hello, yet another string here!`;
+// There is NO difference between single, double, & backtick quoted strings
+// "Hello" & 'Hello' & `Hello` are the same string for JS.
+
+let aLongString = thisIsAString + thisIsAnotherString;
+// ^ String concatenation - the plus, on strings, just adds them together one after the other
+
+console.log(thisIsAString);
+console.log(thisIsAnotherString);
+console.log(thisIsYetAnotherString);
+
+console.log(aLongString);
+
+console.log("\n---------------------TYPEOF OPERATOR-------------------\n");
+
+let aNumberVariable = 123;
+console.log(
+  "typeof with a variable containing a number:",
+  typeof aNumberVariable
+);
+// typeof is an operator that allows you to know the type
+// of a given value, of the content of variable, any value that you
+// write after typeof ____
+
+console.log("typeof 'String of data':", typeof "String of data");
