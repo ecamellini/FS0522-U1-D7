@@ -213,7 +213,7 @@ console.log("\n-------------------LOGICAL OPERATORS---------------\n");
 // 2) Their hair color, as a string
 
 let height = 170; // Change these values to simulate different user inputs
-let hairColor = "red";
+let hairColor = "black";
 
 // We want to make a program that tells if the user
 // can be casted for a movie or not.
@@ -259,3 +259,18 @@ console.log("Can the user join the cast?", canCastForTheMovie);
 // canCastForTheMovie =
 //   (height > 185 && hairColor === "blonde") ||
 //   (height < 175 && (hairColor === "brown" || hairColor === "red"));
+
+// What if we want to print "You can join the cast!" in case the user can join.
+// Or, in case they can't, we print "You cannot join, try the next time :(".
+
+if (canCastForTheMovie === true) {
+  // Then block: what to do in case the condition is true
+  console.log("You can join the cast!");
+} else {
+  // Else block: what to do in case the condition is false
+  console.log("You cannot join, try the next time :(");
+}
+
+// We could also have just said if (canCastForTheMovie) { ... }
+// Because canCastForTheMovie is already a boolean.
+/// And the IF STATEMENT requires a boolean to take a decision.
