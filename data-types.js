@@ -78,3 +78,12 @@ console.log(
 // write after typeof ____
 
 console.log("typeof 'String of data':", typeof "String of data");
+
+console.log("\n-----------------------BOOLEAN---------------------------\n");
+
+let areWeInNovember = true;
+let areWeOnPlanetMars = false;
+
+console.log("areWeInNovember: ", areWeInNovember);
+console.log("areWeOnPlanetMars: ", areWeOnPlanetMars);
+console.log("typeof true:", typeof true);
