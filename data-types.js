@@ -184,3 +184,24 @@ console.log(
 );
 
 console.log(`parseInt("Hello")`, parseInt("Hello"));
+
+console.log("\n-------------------EQUALITY & INEQUALITY---------------\n");
+
+let numberToGuess = 25;
+let userAttempt = 12; // Change this and see what happens
+// The user is trying to guess the number 25...
+
+// console.log("Correct guess?", numberToGuess == userAttempt);
+//                ^^^ NEVER USE THE ==, ALWAYS USE THE ===
+// WHY? BECAUSE THIS WILL RESULT true even if you do "25" == 25
+
+console.log("Correct guess?", numberToGuess === userAttempt);
+
+// Inequality in JS -- different from -- you write it !==
+console.log("The opposite of the result above:", numberToGuess !== userAttempt);
+
+// For the same reason, NEVER USE != with a single euquals
+
+console.log("If you want to compare strings and number, use parsing!");
+console.log("'20' === 20", "20" === 20);
+console.log("parseInt('20') === 20", parseInt("20") === 20);
