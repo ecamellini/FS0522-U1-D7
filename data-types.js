@@ -110,3 +110,33 @@ console.log("twoTimesTheSugar:", twoTimesTheSugar);
 // AVOID THIS AT ALL COSTS:
 // AVOID ASSIGNING VALUES OF DIFFERENT TYPES TO THE SAME VARIABLE.
 // Just one exception: null -- if you want to empty a variable, you can change it to null.
+
+console.log("\n----------------------ARITHMETIC OPERATORS----------------\n");
+
+console.log("5 + 10", 5 + 10); // 15
+console.log("10 / 3", 10 / 3); // 3.333333
+console.log("10 - 3 + 6", 10 - 3 + 6); // 13
+console.log("10 * 3 - 1", 10 * 3 - 1); // 29
+console.log("10 * (3 - 1)", 10 * (3 - 1)); // 20 -- you can use round brackets to define priority
+console.log("10 + (15 * (20 / 2)) - 1", 10 + 15 * (20 / 2) - 1);
+
+// USE AS MANY BRACKETS AS YOU WANT -- always be explicit about what operation you want to do before
+
+console.log("16 % 3", 16 % 3); // Remainder of the integer division.
+// 1) divide 16 times 3 -> but the result is integer
+//    -- how many times we can fit the 3 inside the 16
+//    -- 3 - 6 - 9 - 12 - 15 ---> 5 times
+//    How much we miss to reach 16? 1.
+//    1 is the remainder of the integer division.
+
+console.log(
+  "\n----------------CHECKING IF A NUMBER IS EVEN OR NOT---------------\n"
+);
+
+// If you can EXACTLY divide a number by 2, it is even.
+// Otherwise it is odd...
+
+// EXACTLY DIVIDE MEANS: the result is an integer -> there is no remainder
+
+let numberEvenOrOdd = 14; // Try to change this and see what happens...
+console.log(numberEvenOrOdd % 2); // --> if numberEvenOrOdd is even --> this will print 0
