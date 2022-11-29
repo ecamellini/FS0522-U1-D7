@@ -138,5 +138,16 @@ console.log(
 
 // EXACTLY DIVIDE MEANS: the result is an integer -> there is no remainder
 
-let numberEvenOrOdd = 14; // Try to change this and see what happens...
+let numberEvenOrOdd = -14; // Try to change this and see what happens...
 console.log(numberEvenOrOdd % 2); // --> if numberEvenOrOdd is even --> this will print 0
+
+console.log(
+  "\n------------------CONCATENATION & LOOSE TYPING---------------\n"
+);
+
+console.log("Hello " + 123 + " what's happening " + true);
+
+// BEWARE ABOUT THIS ^
+// The plus operato in JS, if you apply it to things that are not NUMBERS
+// 1) Convert everything into strings
+// 2) concatenate all the things together
