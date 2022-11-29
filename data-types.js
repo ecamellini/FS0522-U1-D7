@@ -87,3 +87,26 @@ let areWeOnPlanetMars = false;
 console.log("areWeInNovember: ", areWeInNovember);
 console.log("areWeOnPlanetMars: ", areWeOnPlanetMars);
 console.log("typeof true:", typeof true);
+
+console.log("\n--------------------LOOSE TYPING------------------------\n");
+
+let gramsOfSugar = 125; // number
+
+console.log("gramsOfSugar:", gramsOfSugar);
+
+gramsOfSugar = "125 grams"; // we assign a string to the same variable
+
+console.log("gramsOfSugar:", gramsOfSugar);
+
+let twoTimesTheSugar = 2 * gramsOfSugar;
+
+console.log("twoTimesTheSugar:", twoTimesTheSugar);
+
+// Variables in JavaScript can change type overtime.
+// You can put a number in a variable...
+// And then a string, in the same variable.
+// JS will not complain. JavaScript is a Loosely Typed programming language.
+
+// AVOID THIS AT ALL COSTS:
+// AVOID ASSIGNING VALUES OF DIFFERENT TYPES TO THE SAME VARIABLE.
+// Just one exception: null -- if you want to empty a variable, you can change it to null.
