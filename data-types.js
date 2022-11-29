@@ -205,3 +205,57 @@ console.log("The opposite of the result above:", numberToGuess !== userAttempt);
 console.log("If you want to compare strings and number, use parsing!");
 console.log("'20' === 20", "20" === 20);
 console.log("parseInt('20') === 20", parseInt("20") === 20);
+
+console.log("\n-------------------LOGICAL OPERATORS---------------\n");
+
+// Imagine that we have a form where the user can insert
+// 1) Their height, as a number
+// 2) Their hair color, as a string
+
+let height = 170; // Change these values to simulate different user inputs
+let hairColor = "red";
+
+// We want to make a program that tells if the user
+// can be casted for a movie or not.
+// The user can be casted for the movie only if:
+// -- taller than 185 & with blond hair
+// -- shorter than 175 & with brown or red hair
+
+// When you need to translate some logic into JS,
+// or some decisions that you're making
+// use variables names that answer to your questions.
+
+let isTallerThan185 = height > 185;
+console.log("isTallerThan185: ", isTallerThan185);
+
+let hasBlondeHair = hairColor === "blonde"; // This will be true if we get "blonde" inside hairColor
+console.log("hasBlondeHair: ", hasBlondeHair);
+
+// THIS IS AN AND OPERATOR -- it is an operator for boolean values.
+// It results true only of they are both true together
+let isTallerThan185AndBlonde = isTallerThan185 && hasBlondeHair;
+
+// isTallerThan185AndBlonde = height > 185 && hairColor === "blonde";
+//          ^ this is the same thing as above, but without storing temprary results in variables
+console.log("Is taller than 185 and blonde: ", isTallerThan185AndBlonde);
+
+let isShorterThan175 = height < 175;
+// OR OPERATOR -- true whenever one of the two is true
+let hasBrownOrRedHair = hairColor === "brown" || hairColor === "red";
+
+let isShorterThan175AndBrownOrRedHaired = isShorterThan175 && hasBrownOrRedHair;
+console.log(
+  "Is shorter than 175 and brown or red haired: ",
+  isShorterThan175AndBrownOrRedHaired
+);
+
+let canCastForTheMovie =
+  isTallerThan185AndBlonde || isShorterThan175AndBrownOrRedHaired;
+
+console.log("Can the user join the cast?", canCastForTheMovie);
+
+// This is the same: but harder to read (?)
+// For sure it's easier to forget a parenthesis here & introduce a bug in your code.
+// canCastForTheMovie =
+//   (height > 185 && hairColor === "blonde") ||
+//   (height < 175 && (hairColor === "brown" || hairColor === "red"));
